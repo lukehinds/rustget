@@ -1,6 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use base64::{decode};
+use p256::elliptic_curve::sec1::{EncodedPoint, FromEncodedPoint, ToEncodedPoint};
 use p256::{
     ecdsa::{SigningKey, signature::Signer, VerifyingKey, signature::Verifier},
 };
@@ -45,14 +46,6 @@ fn contents(script: &str) -> Result<Content, ureq::Error> {
 fn main() {
     let script = "install.sh";
     let content = contents(script);
-    // match content {
-    //     Ok(c) => {
-    //         println!("{}", c.name);
-    //     },
-    //     Err(e) => {
-    //         println!("{}", e);
-    //     }
-    // }
     // print out content name
     let base_64 = content.unwrap().content.clone();
     // print base_file (need to trim off new line)
@@ -67,4 +60,8 @@ fn main() {
 
     let verify_key = VerifyingKey::from(&signing_key); // Serialize with `::to_encoded_point()`
     assert!(verify_key.verify(base_64.trim().as_bytes(), &signature).is_ok());
+    // print out ecdsa::verify::VerifyingKey
+    println!("{:?}", verify_key);
+    let public_key = PublicKey::from(&verify_key);
+    println!("{:?}", public_key);
 }
