@@ -1,0 +1,71 @@
+ 2072  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/anteater/keys
+ 2073  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repositories/66079606/keys
+ 2074  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/anteater/anteater/keys
+ 2083  curl \\n  -X POST \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/git/trees \\n  -d '{"tree":[{"path":"path","mode":"mode","type":"type","sha":"sha","content":"content"}]}'
+ 2101  curl \\n  -X POST \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/octocat/hello-world/git/blobs \\n  -d '{"content":"content"}'
+ 2104  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/octocat/hello-world/git/blobs/16b05f6899b2685c50f9133ddd3e3e2638c3d672
+ 2106  curl \\n  -X POST \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/git/blobs \\n  -d '{"content":"LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNkekNDQWZ5Z0F3SUJBZ0lVQU1lVUNtWjVQTTVXaTVNclg0REVldE1UZVc0d0NnWUlLb1pJemowRUF3TXcKS2pFVk1CTUdBMVVFQ2hNTWMybG5jM1J2Y21VdVpHVjJNUkV3RHdZRFZRUURFd2h6YVdkemRHOXlaVEFlRncweQpNVEEyTVRBd05qUTFOVGRhRncweU1UQTJNVEF3TnpBMU5UZGFNQUF3V1RBVEJnY3Foa2pPUFFJQkJnZ3Foa2pPClBRTUJCd05DQUFTZTNMaXVOQnBhSUhqUnptYnY4enFIdWh2RmJ4Qi96TEdRTGcrN01LU0VSQVFXZ3ZIMFlNcVAKUVYrTlB5ZDU0MG5wcFVKM1ZOdmNPWTliQ0g4c21ZMkNvNElCS0RDQ0FTUXdEZ1lEVlIwUEFRSC9CQVFEQWdlQQpNQk1HQTFVZEpRUU1NQW9HQ0NzR0FRVUZCd01ETUF3R0ExVWRFd0VCL3dRQ01BQXdIUVlEVlIwT0JCWUVGUGpCClZ5dE9SSndUWDdxT0hyWENBL255akk1Uk1COEdBMVVkSXdRWU1CYUFGTWpGSFFCQm1pUXBNbEVrNncydVN1MUsKQnRQc01JR05CZ2dyQmdFRkJRY0JBUVNCZ0RCK01Id0dDQ3NHQVFVRkJ6QUNobkJvZEhSd09pOHZjSEpwZG1GMApaV05oTFdOdmJuUmxiblF0TmpBelptVTNaVGN0TURBd01DMHlNakkzTFdKbU56VXRaalJtTldVNE1HUXlPVFUwCkxuTjBiM0poWjJVdVoyOXZaMnhsWVhCcGN5NWpiMjB2WTJFek5tRXhaVGsyTWpReVlqbG1ZMkl4TkRZdlkyRXUKWTNKME1COEdBMVVkRVFFQi93UVZNQk9CRVd4b2FXNWtjMEJ5WldSb1lYUXVZMjl0TUFvR0NDcUdTTTQ5QkFNRApBMmtBTUdZQ01RRGNMUElnbWNYbmo1dlZxSWwyTzh5MW1JRVhyYUgrZlg0Q0FWQ2RTWFlvRWE4TVpsMHdIVktICmNpVUQrS2xQTGtrQ01RQ05vLzBMK3owUitvUFFnV25QMTdtVkVIWVVDMURucGdrZE1NVDRTaDNkd1BqWEIvZTQKWjBtcHBEeFZMMjA4bkFnPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="}'
+ 2108  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/git/blobs/16b05f6899b2685c50f9133ddd3e3e2638c3d672
+ 2110  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/git/blobs/4219b7d97079062871c43c7418a2f2def7cb37dd
+ 2113  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/git/blobs/c77faa2b05ad65142c85dc90d9f21bbb75b1e2ee
+ 2115  newcurl \                                                                                                                                                                \M-2 ✔ \M-2 7131 \M-2 13:00:41\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/git/blobs/8c1615893f85c12d92ca75069317df347f690469
+ 2116  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/git/blobs/8c1615893f85c12d92ca75069317df347f690469
+ 2117  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/octocat/hello-world/git/matching-refs/REF
+ 2118  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/git/matching-refs/REF
+ 2119  curl \n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/git/matching-refs/HEAD
+ 2120  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/git/matching-refs/HEAD
+ 2121  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/git/matching-refs
+ 2122  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/git/matching-refs/
+ 2127  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/octocat/hello-world/commits/refs/heads/main
+ 2128  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/octocat/hello-world/commits/9954b3b2003c9cf4de0f2d3519e041852e125c7f
+ 2129  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/commits/8c1615893f85c12d92ca75069317df347f690469
+ 2131  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/commits/9954b3b2003c9cf4de0f2d3519e041852e125c7f
+ 2132  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/commits/4219b7d97079062871c43c7418a2f2def7cb37dd
+ 2133  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/commits/c3e42a80af01705c6e7dc48a3b13922f715842c7
+ 2134  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/commits/2c496259c3d31e9458912518ca202ae6289341a6
+ 2139  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/commits/ce013625030ba8dba906f756967f9e9ca394464a
+ 2140  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/commits/a433edc34b26c1dc1c2c2add0db33a5413ab3c19
+ 2147  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/commits/33022aea9e3ce975e688c8ab42d5c65ff15087d5
+ 2160  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/sigstore/cosign/releases/latest
+ 2162  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/releases/latest
+ 2163  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/releases/tags/v0.1.3
+ 2166  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/releases/latest'
+ 2167  curl \\n  -H "Accept: application/vnd.github.v3+json" \\n  https://api.github.com/repos/lukehinds/testrepo/releases/latest
+ 2168  curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/releases/latest | jq '.tag_name'
+ 2169  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/releases/tags/v0.1.3
+ 2170  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/git/ref/tags/v0.1.3\|jq '.sha'
+ 2171  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/git/ref/tags/v0.1.3\|jq '.object'
+ 2172  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/git/ref/tags/v0.1.3
+ 2173  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/git/ref/tags/v0.1.3\|jq
+ 2174  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/git/ref/tags/v0.1.3 |jq
+ 2175  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/git/ref/tags/v0.1.3 |jq '.sha'
+ 2176  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/git/ref/tags/v0.1.3 |jq '.object'
+ 2177  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/git/ref/tags/v0.1.3 |jq '.object'|grep shha
+ 2178  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/git/ref/tags/v0.1.3 |jq '.object'|grep sha
+ 2180  curl \\n-H "Accept: application/vnd.github.v3+json" \\nhttps://api.github.com/repos/lukehinds/testrepo/commits/33022aea9e3ce975e688c8ab42d5c65ff15087d5
+ 2181  curl \\n-H "Accept: application/vnd.github.v3+json" \\nhttps://api.github.com/repos/lukehinds/testrepo/commits/33022aea9e3ce975e688c8ab42d5c65ff15087d5 | jq '.files'
+ 2182  curl -s \\n-H "Accept: application/vnd.github.v3+json" \\nhttps://api.github.com/repos/lukehinds/testrepo/commits/33022aea9e3ce975e688c8ab42d5c65ff15087d5 | jq '.files'
+ 2238  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/git/ref/tags/v2.0 |jq
+ 2240  curl -s \\n-H "Accept: application/vnd.github.v3+json" \\nhttps://api.github.com/repos/lukehinds/testrepo/commits/2694db9f66e35bc8a772f698ba75769c19507175 | jq '.files'
+ 2243  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/releases/latest | jq
+ 2277  curl -s \\n-H "Accept: application/vnd.github.v3+json" \\nhttps://api.github.com/repos/lukehinds/testrepo/commits/194c1ce030c6c8379f74757050fecde5ae20a635 | jq '.files'
+ 2299  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/git/ref/tags/v2.0 |jq '.object'|grep sha
+ 2300  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/git/ref/tags/v2.0 |jq
+ 2454  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/rustup/git/ref/tags/1.24.2 |jq '.object'|grep sha
+ 2455  curl -s \\n-H "Accept: application/vnd.github.v3+json" \\nhttps://api.github.com/repos/lukehinds/rustup/commits/ef5daa61fee8849a6048b4d3e17172392ffd516c | jq '.files'
+ 2456  curl -s \\n-H "Accept: application/vnd.github.v3+json" \\nhttps://api.github.com/repos/lukehinds/rustup/commits/ef5daa61fee8849a6048b4d3e17172392ffd516c | jq
+ 2471  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/rustup/git/ref/tags/v2.0 |jq '.object'|grep sha
+ 2472  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/rustup/git/ref/tags/v2.0 |jq
+ 2473  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/rustup/git/ref/tags/cd091d867aec7038322bfe2bc41a2bdd9235bef0
+ 2474  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/git/ref/tags/v2.0
+ 2475  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/rustup/git/ref/tags/v1.0 |jq
+ 2476  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/rustup/releases/latest | jq
+ 2477  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/rustup/releases/tags/v1.0
+ 3465  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/gitstore-testrepo/git/ref/tags/v2.0 |jq '.object'|grep sha
+ 3466  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/gitstore-testrepo/git/ref/tags/v2.0 |jq '.object'
+ 3467  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/gitstore-testrepo/git/ref/tags/v4.0 |jq '.object'|grep sha
+ 3468  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/git/ref/tags/v4.0 |jq '.object'|grep sha
+ 3469  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/commits/b02adf64b592743c1d4a6f2a8d7518298b51d306
+ 3470  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/releases/latest | jq '.tag_name'
+10114* curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/git/ref/tags/v4.0 |jq '.object'|grep sha
+10115  curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/lukehinds/testrepo/commits/b02adf64b592743c1d4a6f2a8d7518298b51d306
