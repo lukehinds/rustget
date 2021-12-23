@@ -1,12 +1,14 @@
-
-use serde::{Serialize, Deserialize};
 use base64::{decode};
-use p256::elliptic_curve::sec1::{EncodedPoint, FromEncodedPoint, ToEncodedPoint};
-use p256::{
-    ecdsa::{SigningKey, signature::Signer, VerifyingKey, signature::Verifier},
+use serde::{Serialize, Deserialize};
+// use openssl::ec::*;
+use openssl::nid::Nid;
+// use openssl::symm::{decrypt as aes_decrypt, Cipher};
+use openssl::{
+    ec::EcGroup, ec::EcKey
 };
-use p256::PublicKey;
-use rand_core::OsRng; // requires 'getrandom' feature
+use std::fs::File;
+use std::io::{Error, Write};
+use openssl::symm::Cipher;
 
 #[derive(Serialize, Deserialize)]
 struct Content {
@@ -55,13 +57,38 @@ fn main() {
     // print out decoded base64 as string
     println!("{}", String::from_utf8(decoded.clone()).unwrap());
 
-    let signing_key = SigningKey::random(&mut OsRng); // Serialize with `::to_bytes()`
-    let signature = signing_key.sign(base_64.trim().as_bytes());
+    // key generation
 
-    let verify_key = VerifyingKey::from(&signing_key); // Serialize with `::to_encoded_point()`
-    assert!(verify_key.verify(base_64.trim().as_bytes(), &signature).is_ok());
-    // print out ecdsa::verify::VerifyingKey
-    println!("{:?}", verify_key);
-    let public_key = PublicKey::from(&verify_key);
-    println!("{:?}", public_key);
+    let group = EcGroup::from_curve_name(Nid::X9_62_PRIME256V1).unwrap();
+
+    let private_key = EcKey::generate(&group).unwrap();
+
+    let public_key = private_key.public_key();
+
+    let ec_pub_key = EcKey::from_public_key(&group, &public_key).unwrap();
+
+    let public_key_pem = &ec_pub_key.public_key_to_pem().unwrap();
+    let pub_pem: String = String::from_utf8(public_key_pem.clone()).unwrap();
+    println!("{}", pub_pem);
+
+    let private_key_pem = &private_key.private_key_to_pem_passphrase(Cipher::aes_128_cbc(), b"foobar").unwrap();
+    let pkey_pem: String = String::from_utf8(private_key_pem.clone()).unwrap();
+    println!("{}", pkey_pem);
+
+    let mut ofile = File::create("sget.key")
+                       .expect("unable to create file");
+    ofile.write_all(pkey_pem.as_bytes()).expect("unable to write");
 }
+
+
+// Sigstore relies on NIST P-256
+// NIST P-256 is a Weierstrass curve specified in FIPS 186-4: Digital Signature Standard (DSS):
+// https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf
+// Also known as prime256v1 (ANSI X9.62) and secp256r1 (SECG)
+
+// openssl dgst -sha1 -sign sget.key examples.txt > signature
+
+// openssl dgst -sha1 -verify sget.pub -signature signature examples.txt
+
+// change to PEM format
+// https://github.com/Pierozi/rust-civic-sip/blob/a055763947884044cb828f7c05731a00c6c3af75/src/crypto.rs
