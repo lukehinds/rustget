@@ -7,7 +7,7 @@ use openssl::{
     ec::EcGroup, ec::EcKey
 };
 use std::fs::File;
-use std::io::{Error, Write};
+use std::io::{Write};
 use openssl::symm::Cipher;
 
 #[derive(Serialize, Deserialize)]
@@ -72,12 +72,14 @@ fn main() {
     println!("{}", pub_pem);
 
     let private_key_pem = &private_key.private_key_to_pem_passphrase(Cipher::aes_128_cbc(), b"foobar").unwrap();
-    let pkey_pem: String = String::from_utf8(private_key_pem.clone()).unwrap();
-    println!("{}", pkey_pem);
 
-    let mut ofile = File::create("sget.key")
+    let mut pkey = File::create("sget.key")
                        .expect("unable to create file");
-    ofile.write_all(pkey_pem.as_bytes()).expect("unable to write");
+    pkey.write_all(String::from_utf8(private_key_pem.clone()).unwrap().as_bytes()).expect("unable to write");
+
+    let mut pubkey = File::create("sget.pub")
+                       .expect("unable to create file");
+    pubkey.write_all( String::from_utf8(public_key_pem.clone()).unwrap().as_bytes()).expect("unable to write");
 }
 
 
